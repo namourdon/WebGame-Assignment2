@@ -20,11 +20,13 @@ var assetData:objects.Asset[] = [
     {id: "StartButton", src:"../../Assets/images/StartButton.png"},
     {id: "StartOverButton", src:"../../Assets/images/StartOverButton.png"},
     {id: "SlotMachine", src:"../../Assets/images/SlotMachine.png"},
-    {id: "Bet1Button", src:"../../Assets/images/Bet1Button.png"},
-    {id: "Bet10Button", src:"../../Assets/images/Bet10Button.png"},
-    {id: "Bet100Button", src:"../../Assets/images/Bet100Button.png"},
+    {id: "Bet50Btn", src:"../../Assets/images/Bet50Btn.png"},
+    {id: "Bet100Btn", src:"../../Assets/images/Bet100Btn.png"},
+    {id: "Bet500Btn", src:"../../Assets/images/Bet500Btn.png"},
     {id: "SpinButton", src:"../../Assets/images/SpinButton.png"},
     {id: "BlackBackground", src:"../../Assets/images/BlackBackground.png"},
+    {id:"ExitButton",src:"../../Assets/images/ExitButton.png"},
+    {id:"ResetButton",src:"../../Assets/images/ResetButton.png"},
     {id: "WhiteBackground", src:"../../Assets/images/WhiteBackground.png"}
 ];
 

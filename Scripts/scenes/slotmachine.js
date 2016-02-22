@@ -26,22 +26,30 @@ var scenes;
             // add background image to the scene
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
-            // add Bet1Button to the scene
-            this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
-            this.addChild(this._bet1Button);
-            this._bet1Button.on("click", this._bet1ButtonClick, this);
-            // add Bet10Button to the scene
-            this._bet10Button = new objects.Button("Bet10Button", 240, 382, false);
-            this.addChild(this._bet10Button);
-            this._bet10Button.on("click", this._bet10ButtonClick, this);
-            // add Bet100Button to the scene
-            this._bet100Button = new objects.Button("Bet100Button", 312, 382, false);
-            this.addChild(this._bet100Button);
-            this._bet100Button.on("click", this._bet100ButtonClick, this);
             // add SpinButton to the scene
-            this._spinButton = new objects.Button("SpinButton", 402, 382, false);
+            this._spinButton = new objects.Button("SpinButton", 200, 381, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this);
+            // add ResetButton to the scene
+            this._resetButton = new objects.Button("ResetButton", 307, 381, false);
+            this.addChild(this._resetButton);
+            this._resetButton.on("click", this._resetButtonClick, this);
+            // add ExitButton to the scene
+            this._exitButton = new objects.Button("ExitButton", 399, 381, false);
+            this.addChild(this._exitButton);
+            this._exitButton.on("click", this._exitButtonClick, this);
+            // add Bet50Btn to the scene
+            this._bet50Btn = new objects.Button("Bet50Btn", 226, 443, false);
+            this.addChild(this._bet50Btn);
+            this._bet50Btn.on("click", this._bet50BtnClick, this);
+            // add Bet100Btn to the scene
+            this._bet100Btn = new objects.Button("Bet100Btn", 307, 443, false);
+            this.addChild(this._bet100Btn);
+            this._bet100Btn.on("click", this._bet100BtnClick, this);
+            // add Bet500Btn to the scene
+            this._bet500Btn = new objects.Button("Bet500Btn", 399, 443, false);
+            this.addChild(this._bet500Btn);
+            this._bet500Btn.on("click", this._bet500BtnClick, this);
             // Setup Background
             this._setupBackground("WhiteBackground");
             // FadeIn
@@ -102,18 +110,24 @@ var scenes;
             return betLine;
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        SlotMachine.prototype._bet1ButtonClick = function (event) {
-            console.log("Bet 1 Credit");
+        SlotMachine.prototype._bet50BtnClick = function (event) {
+            console.log("Bet 50 Credit");
         };
-        SlotMachine.prototype._bet10ButtonClick = function (event) {
-            console.log("Bet 10 Credit");
-        };
-        SlotMachine.prototype._bet100ButtonClick = function (event) {
+        SlotMachine.prototype._bet100BtnClick = function (event) {
             console.log("Bet 100 Credit");
+        };
+        SlotMachine.prototype._bet500BtnClick = function (event) {
+            console.log("Bet 500 Credit");
         };
         SlotMachine.prototype._spinButtonClick = function (event) {
             console.log("Spin those reels!");
             console.log(this._reels());
+        };
+        SlotMachine.prototype._resetButtonClick = function (event) {
+            console.log("Credit reset");
+        };
+        SlotMachine.prototype._exitButtonClick = function (event) {
+            console.log("Exit Game");
         };
         return SlotMachine;
     })(objects.Scene);
