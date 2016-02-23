@@ -32,32 +32,32 @@ module scenes {
             this.addChild(this._backgroundImage);
             
             // add SpinButton to the scene
-            this._spinButton = new objects.Button("SpinButton", 200, 381, false);
+            this._spinButton = new objects.Button("SpinButton", 200, 375, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this); 
             
             // add ResetButton to the scene
-            this._resetButton = new objects.Button("ResetButton", 307, 381, false);
+            this._resetButton = new objects.Button("ResetButton", 290, 375, false);
             this.addChild(this._resetButton);
             this._resetButton.on("click", this._resetButtonClick, this);
             
             // add ExitButton to the scene
-            this._exitButton = new objects.Button("ExitButton", 399, 381, false);
+            this._exitButton = new objects.Button("ExitButton", 380, 375, false);
             this.addChild(this._exitButton);
             this._exitButton.on("click", this._exitButtonClick, this);  
             
             // add Bet50Btn to the scene
-            this._bet50Btn = new objects.Button("Bet50Btn", 226, 443, false);
+            this._bet50Btn = new objects.Button("Bet50Btn", 200, 430, false);
             this.addChild(this._bet50Btn);
             this._bet50Btn.on("click", this._bet50BtnClick, this); 
            
             // add Bet100Btn to the scene
-            this._bet100Btn = new objects.Button("Bet100Btn", 307, 443, false);
+            this._bet100Btn = new objects.Button("Bet100Btn", 290, 430, false);
             this.addChild(this._bet100Btn);
             this._bet100Btn.on("click", this._bet100BtnClick, this); 
             
             // add Bet500Btn to the scene
-            this._bet500Btn = new objects.Button("Bet500Btn", 399, 443, false);
+            this._bet500Btn = new objects.Button("Bet500Btn", 380, 430, false);
             this.addChild(this._bet500Btn);
             this._bet500Btn.on("click", this._bet500BtnClick, this); 
             
