@@ -29,7 +29,7 @@ var scenes;
             // START Button event listener
             this._startButton.on("click", this._startButtonClick, this);
             // Setup Background
-            this._setupBackground("WhiteBackground");
+            this._setupBackground("backgroung.jpg");
             // FadeIn
             this._fadeIn(500);
             // add this scene to the global stage container
