@@ -1,4 +1,5 @@
 ﻿body {
+   background-image: url("dia0806.jpg");
     
      
 }
@@ -6,15 +7,20 @@
 
 canvas {
     margin: auto;
-    display: block;
     
-    border-radius: 10px;
-    text-align: center;
-    margin-left: 20%;
-    margin-top: 40px;
-   background-image: url("background.jpg");
-}
+display: block;
+    
+order-radius: 10px;
+    
 
+text-align: center;
+   
+ margin-left: 20%;
+    
+margin-top: 40px;
+   
+
+}
 .game {
     width: 80%;
     margin: 0 auto;

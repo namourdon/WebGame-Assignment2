@@ -113,6 +113,6 @@ function changeScene(): void {
             console.log("Starting GAME_OVER Scene");
             break;
     }
-    window.onload= preload;
+ 
     console.log(currentScene.numChildren);
 }

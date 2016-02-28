@@ -94,7 +94,6 @@ function changeScene() {
             console.log("Starting GAME_OVER Scene");
             break;
     }
-    window.onload = preload;
     console.log(currentScene.numChildren);
 }
 //# sourceMappingURL=game.js.map
