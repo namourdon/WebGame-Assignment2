@@ -129,11 +129,9 @@ var scenes;
             console.log("Bet 500 Credit");
         };
         SlotMachine.prototype._spinButtonClick = function (event) {
-            console.log(this._spinReels());
             var bitmap = this._spinReels();
-            //this._reels[0]= new createjs.Bitmap(assets.getResult(seashells[0]));
             for (var reel = 0; reel < 3; reel++) {
-                this._reels[0].image = assets.getResult(bitmap[0]);
+                this._reels[reel].image = assets.getResult(bitmap[reel]);
             }
             //this.addChild(this._reels[0]);
             // console.log(this.numChildren);

@@ -9,7 +9,7 @@ module scenes {
         private _spinButton: objects.Button;
         private _exitButton: objects.Button;
         private _resetButton: objects.Button;
-        private _reels:createjs.Bitmap[];
+        private _reels: createjs.Bitmap[];
 
         private _grapes = 0;
         private _bananas = 0;
@@ -48,7 +48,7 @@ module scenes {
             this.addChild(this._bet500Btn);
             this._bet500Btn.on("click", this._bet500BtnClick, this); 
             // add SpinButton to the scene
-            this._spinButton = new objects.Button("SpinButton",380, 430, false);
+            this._spinButton = new objects.Button("SpinButton", 380, 430, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this); 
             
@@ -62,17 +62,16 @@ module scenes {
             this.addChild(this._exitButton);
             this._exitButton.on("click", this._exitButtonClick, this);  
             
-             //Initialise array of Bitmaps
-            this._reels= new Array<createjs.Bitmap>();
-            
-            for(var reel:number=0; reel<3; reel++){
-                this._reels[reel]= new createjs.Bitmap(assets.getResult("Blank"));
-                this._reels[reel].x=220+(reel*80);
-                this._reels[reel].y=210;
+            //Initialise array of Bitmaps
+            this._reels = new Array<createjs.Bitmap>();
+            for (var reel: number = 0; reel < 3; reel++) {
+                this._reels[reel] = new createjs.Bitmap(assets.getResult("Blank"));
+                this._reels[reel].x = 220 + (reel * 80);
+                this._reels[reel].y = 210;
                 this.addChild(this._reels[reel]);
-                console.log("reel"+ reel+" "+ this._reels[reel]);
+                console.log("reel" + reel + " " + this._reels[reel]);
             }
-            
+         
             // Setup Background
             this._setupBackground("WhiteBackground");
            
@@ -151,25 +150,22 @@ module scenes {
             console.log("Bet 500 Credit");
         }
         private _spinButtonClick(event: createjs.MouseEvent): void {
-            console.log(this._spinReels());
-            var bitmap:string[]= this._spinReels();
-            
-            //this._reels[0]= new createjs.Bitmap(assets.getResult(seashells[0]));
-           for(var reel:number=0; reel<3;reel++){
-               
-           this._reels[0].image=assets.getResult(bitmap[0]);
-           }
+
+            var bitmap: string[] = this._spinReels();
+            for (var reel: number = 0; reel < 3; reel++) {
+                this._reels[reel].image = assets.getResult(bitmap[reel]);
+            }
             //this.addChild(this._reels[0]);
-           // console.log(this.numChildren);
-             
+            // console.log(this.numChildren);
             
         }
-        private _resetButtonClick(event:createjs.MouseEvent):void{
+        private _resetButtonClick(event: createjs.MouseEvent): void {
             console.log("Credit reset");
         }
-        
-        private _exitButtonClick(event:createjs.MouseEvent):void{
+
+        private _exitButtonClick(event: createjs.MouseEvent): void {
             console.log("Exit Game");
         }
+        //  }
     }
 }

@@ -14,28 +14,28 @@ var menu: scenes.Menu;
 var slotMachine: scenes.SlotMachine;
 var gameOver: scenes.GameOver;
 
-var assetData:objects.Asset[] = [
-    {id: "BackButton", src:"../../Assets/images/BackButton.png"},
-    {id: "Nextbutton", src:"../../Assets/images/Nextbutton.png"},
-    {id: "StartButton", src:"../../Assets/images/StartButton.png"},
-    {id: "StartOverButton", src:"../../Assets/images/StartOverButton.png"},
-    {id: "SlotMachine", src:"../../Assets/images/SlotMachine.png"},
-    {id: "Bet50Btn", src:"../../Assets/images/Bet50Btn.png"},
-    {id: "Bet100Btn", src:"../../Assets/images/Bet100Btn.png"},
-    {id: "Bet500Btn", src:"../../Assets/images/Bet500Btn.png"},
-    {id: "SpinButton", src:"../../Assets/images/SpinButton.png"},
-    {id: "BlackBackground", src:"../../Assets/images/BlackBackground.png"},
-    {id:"ExitButton",src:"../../Assets/images/ExitButton.png"},
-    {id:"ResetButton",src:"../../Assets/images/ResetButton.png"},
-    {id: "WhiteBackground", src:"../../Assets/images/WhiteBackground.png"},
-    {id:"Blank",src:"../../Assets/images/Blank.png"},
-    {id:"Grapes",src:"../../Assets/images/Grapes.png"},
-    {id:"Banana",src:"../../Assets/images/Banana.png"},
-    {id:"Cherry",src:"../../Assets/images/Cherry.png"},
-    {id:"Orange",src:"../../Assets/images/Orange.png"},
-    {id:"Bar",src:"../../Assets/images/Bar.png"},
-    {id:"Bell",src:"../../Assets/images/Bell.png"},
-    {id:"Seven",src:"../../Assets/images/Seven.png"}
+var assetData: objects.Asset[] = [
+    { id: "BackButton", src: "../../Assets/images/BackButton.png" },
+    { id: "Nextbutton", src: "../../Assets/images/Nextbutton.png" },
+    { id: "StartButton", src: "../../Assets/images/StartButton.png" },
+    { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" },
+    { id: "SlotMachine", src: "../../Assets/images/SlotMachine.png" },
+    { id: "Bet50Btn", src: "../../Assets/images/Bet50Btn.png" },
+    { id: "Bet100Btn", src: "../../Assets/images/Bet100Btn.png" },
+    { id: "Bet500Btn", src: "../../Assets/images/Bet500Btn.png" },
+    { id: "SpinButton", src: "../../Assets/images/SpinButton.png" },
+    { id: "BlackBackground", src: "../../Assets/images/BlackBackground.png" },
+    { id: "ExitButton", src: "../../Assets/images/ExitButton.png" },
+    { id: "ResetButton", src: "../../Assets/images/ResetButton.png" },
+    { id: "WhiteBackground", src: "../../Assets/images/WhiteBackground.png" },
+    { id: "Blank", src: "../../Assets/images/Blank.png" },
+    { id: "Grapes", src: "../../Assets/images/Grapes.png" },
+    { id: "Banana", src: "../../Assets/images/Banana.png" },
+    { id: "Cherry", src: "../../Assets/images/Cherry.png" },
+    { id: "Orange", src: "../../Assets/images/Orange.png" },
+    { id: "Bar", src: "../../Assets/images/Bar.png" },
+    { id: "Bell", src: "../../Assets/images/Bell.png" },
+    { id: "Seven", src: "../../Assets/images/Seven.png" }
 ];
 
 function preload() {
@@ -121,6 +121,6 @@ function changeScene(): void {
             console.log("Starting GAME_OVER Scene");
             break;
     }
- 
     console.log(currentScene.numChildren);
 }
+    window.onload = preload;
