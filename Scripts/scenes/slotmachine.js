@@ -26,18 +26,6 @@ var scenes;
             // add background image to the scene
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
-            // add SpinButton to the scene
-            this._spinButton = new objects.Button("SpinButton", 380, 430, false);
-            this.addChild(this._spinButton);
-            this._spinButton.on("click", this._spinButtonClick, this);
-            // add ResetButton to the scene
-            this._resetButton = new objects.Button("ResetButton", 200, 430, false);
-            this.addChild(this._resetButton);
-            this._resetButton.on("click", this._resetButtonClick, this);
-            // add ExitButton to the scene
-            this._exitButton = new objects.Button("ExitButton", 290, 430, false);
-            this.addChild(this._exitButton);
-            this._exitButton.on("click", this._exitButtonClick, this);
             // add Bet50Btn to the scene
             this._bet50Btn = new objects.Button("Bet50Btn", 200, 375, false);
             this.addChild(this._bet50Btn);
@@ -50,6 +38,27 @@ var scenes;
             this._bet500Btn = new objects.Button("Bet500Btn", 380, 375, false);
             this.addChild(this._bet500Btn);
             this._bet500Btn.on("click", this._bet500BtnClick, this);
+            // add SpinButton to the scene
+            this._spinButton = new objects.Button("SpinButton", 380, 430, false);
+            this.addChild(this._spinButton);
+            this._spinButton.on("click", this._spinButtonClick, this);
+            // add ResetButton to the scene
+            this._resetButton = new objects.Button("ResetButton", 200, 430, false);
+            this.addChild(this._resetButton);
+            this._resetButton.on("click", this._resetButtonClick, this);
+            // add ExitButton to the scene
+            this._exitButton = new objects.Button("ExitButton", 290, 430, false);
+            this.addChild(this._exitButton);
+            this._exitButton.on("click", this._exitButtonClick, this);
+            //Initialise array of Bitmaps
+            this._reels = new Array();
+            for (var reel = 0; reel < 3; reel++) {
+                this._reels[reel] = new createjs.Bitmap(assets.getResult("Blank"));
+                this._reels[reel].x = 220 + (reel * 80);
+                this._reels[reel].y = 210;
+                this.addChild(this._reels[reel]);
+                console.log("reel" + reel + " " + this._reels[reel]);
+            }
             // Setup Background
             this._setupBackground("WhiteBackground");
             // FadeIn
@@ -67,14 +76,14 @@ var scenes;
         };
         /* When this function is called it determines the betLine results.
         e.g. Bar - Orange - Banana */
-        SlotMachine.prototype._reels = function () {
+        SlotMachine.prototype._spinReels = function () {
             var betLine = [" ", " ", " "];
             var outCome = [0, 0, 0];
             for (var spin = 0; spin < 3; spin++) {
                 outCome[spin] = Math.floor((Math.random() * 65) + 1);
                 switch (outCome[spin]) {
                     case this._checkRange(outCome[spin], 1, 27):
-                        betLine[spin] = "blank";
+                        betLine[spin] = "Blank";
                         this._blanks++;
                         break;
                     case this._checkRange(outCome[spin], 28, 37):
@@ -120,8 +129,14 @@ var scenes;
             console.log("Bet 500 Credit");
         };
         SlotMachine.prototype._spinButtonClick = function (event) {
-            console.log("Spin those reels!");
-            console.log(this._reels());
+            console.log(this._spinReels());
+            var bitmap = this._spinReels();
+            //this._reels[0]= new createjs.Bitmap(assets.getResult(seashells[0]));
+            for (var reel = 0; reel < 3; reel++) {
+                this._reels[0].image = assets.getResult(bitmap[0]);
+            }
+            //this.addChild(this._reels[0]);
+            // console.log(this.numChildren);
         };
         SlotMachine.prototype._resetButtonClick = function (event) {
             console.log("Credit reset");

@@ -23,7 +23,15 @@ var assetData = [
     { id: "BlackBackground", src: "../../Assets/images/BlackBackground.png" },
     { id: "ExitButton", src: "../../Assets/images/ExitButton.png" },
     { id: "ResetButton", src: "../../Assets/images/ResetButton.png" },
-    { id: "WhiteBackground", src: "../../Assets/images/WhiteBackground.png" }
+    { id: "WhiteBackground", src: "../../Assets/images/WhiteBackground.png" },
+    { id: "Blank", src: "../../Assets/images/Blank.png" },
+    { id: "Grapes", src: "../../Assets/images/Grapes.png" },
+    { id: "Banana", src: "../../Assets/images/Banana.png" },
+    { id: "Cherry", src: "../../Assets/images/Cherry.png" },
+    { id: "Orange", src: "../../Assets/images/Orange.png" },
+    { id: "Bar", src: "../../Assets/images/Bar.png" },
+    { id: "Bell", src: "../../Assets/images/Bell.png" },
+    { id: "Seven", src: "../../Assets/images/Seven.png" }
 ];
 function preload() {
     assets = new createjs.LoadQueue();
