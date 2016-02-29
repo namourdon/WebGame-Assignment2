@@ -1,5 +1,7 @@
 ﻿body {
-   background-image: url("dia0806.jpg");
+   background-image: url("1.jpg");
+   background-repeat:no-repeat;
+   background-position: center;
     
      
 }
@@ -7,17 +9,13 @@
 
 canvas {
     margin: auto;
-    
 display: block;
-    
 order-radius: 10px;
-    
-
 text-align: center;
-   
- margin-left: 20%;
-    
+ margin-left:auto;
+ margin-right: auto;
 margin-top: 40px;
+position:
    
 
 }
