@@ -19,7 +19,7 @@ var assetData: objects.Asset[] = [
     { id: "Nextbutton", src: "../../Assets/images/Nextbutton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" },
-    { id: "SlotMachine", src: "../../Assets/images/SlotMachine.png" },
+    { id: "SlotMachine", src: "../../Assets/images/SlotMachine1.gif" },
     { id: "Bet50Btn", src: "../../Assets/images/Bet50Btn.png" },
     { id: "Bet100Btn", src: "../../Assets/images/Bet100Btn.png" },
     { id: "Bet500Btn", src: "../../Assets/images/Bet500Btn.png" },
