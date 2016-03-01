@@ -28,7 +28,7 @@ module scenes {
                    
             // add the START button to the MENU scene
             this._startOverButton = new objects.Button(
-                "StartButton",
+                "StartOverButton",
                 config.Screen.CENTER_X-80,
                 config.Screen.CENTER_Y +80, true);
             this.addChild(this._startOverButton);
