@@ -1,3 +1,5 @@
+//Name:Nashia Amourdon
+//Last edited:29/02/2016
 // GAME_OVER SCENE
 module scenes {
     export class GameOver extends objects.Scene {
@@ -15,19 +17,19 @@ module scenes {
         // Start Method
         public start(): void {    
             
-            // add the WELCOME Label to the MENU scene
+            // add the GAME over  Label to the MENU scene
             this._gameOverLabel = new objects.Label(
                 "GAME OVER", 
-                "60px Consolas", 
-               "#000000", 
+                "60px Lucinda", 
+               "#022F49", 
                 config.Screen.CENTER_X, 
-                config.Screen.CENTER_Y,true);
+                config.Screen.CENTER_Y-20,true);
             this.addChild(this._gameOverLabel);      
                    
             // add the START button to the MENU scene
             this._startOverButton = new objects.Button(
                 "StartButton",
-                config.Screen.CENTER_X,
+                config.Screen.CENTER_X-80,
                 config.Screen.CENTER_Y +80, true);
             this.addChild(this._startOverButton);
             

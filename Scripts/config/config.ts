@@ -1,4 +1,6 @@
-﻿module config {
+﻿//Name:Nashia Amourdon
+//Last edited:25/02/2016
+module config {
 
     // Scene Constants
     export class Scene {

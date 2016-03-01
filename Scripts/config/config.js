@@ -1,3 +1,5 @@
+//Name:Nashia Amourdon
+//Last edited:25/02/2016
 var config;
 (function (config) {
     // Scene Constants

@@ -1,3 +1,5 @@
+//Name:Nashia Amourdon
+//Last edited:29/02/2016
 // MENU SCENE
 module scenes {
     export class Menu extends objects.Scene {
@@ -17,19 +19,19 @@ module scenes {
 
             
             // add the WELCOME Label to the MENU scene
-           /*this._welcomeLabel = new objects.Label(
+           this._welcomeLabel = new objects.Label(
                 "SLOT MACHINE",
-                "60px Consolas",
-                "#000000",
-                config.Screen.CENTER_X,
-                config.Screen.CENTER_Y);
-            this.addChild(this._welcomeLabel);*/
+                "60px Lucinda",
+                "#022F49",
+                config.Screen.CENTER_X-220,
+                config.Screen.CENTER_Y-50,false);
+            this.addChild(this._welcomeLabel);
                    
             // add the START button to the MENU scene
             this._startButton = new objects.Button(
                 "StartButton",
-                config.Screen.CENTER_X,
-                config.Screen.CENTER_Y , true);
+                config.Screen.CENTER_X-80,
+                config.Screen.CENTER_Y+80 , true);
             this.addChild(this._startButton);
             
             // START Button event listener

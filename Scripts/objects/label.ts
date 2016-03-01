@@ -1,4 +1,7 @@
-﻿module objects {
+﻿//Name:Nashia Amourdon
+//Last edited:29/02/2016
+//Labels requirements
+module objects {
     // LABEL CLASS ++++++++++++++++++++++++++++++++++++++++++++++
     export class Label extends createjs.Text {
         // CONSTRUCTOR METHOD +++++++++++++++++++++++++++++++++++

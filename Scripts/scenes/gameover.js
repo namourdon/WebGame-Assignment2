@@ -3,6 +3,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+//Name:Nashia Amourdon
+//Last edited:29/02/2016
 // GAME_OVER SCENE
 var scenes;
 (function (scenes) {
@@ -15,11 +17,11 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         GameOver.prototype.start = function () {
-            // add the WELCOME Label to the MENU scene
-            this._gameOverLabel = new objects.Label("GAME OVER", "60px Consolas", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
+            // add the GAME over  Label to the MENU scene
+            this._gameOverLabel = new objects.Label("GAME OVER", "60px Lucinda", "#022F49", config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
             this.addChild(this._gameOverLabel);
             // add the START button to the MENU scene
-            this._startOverButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 80, true);
+            this._startOverButton = new objects.Button("StartButton", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y + 80, true);
             this.addChild(this._startOverButton);
             // START Button event listener
             this._startOverButton.on("click", this._startOverButtonClick, this);

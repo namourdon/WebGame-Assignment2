@@ -1,3 +1,6 @@
+//Name:Nashia Amourdon
+//Last edited:29/02/2016
+//controls the different scenes
 module objects {
     // Scene Class
     export class Scene extends createjs.Container {

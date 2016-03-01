@@ -1,3 +1,5 @@
+//Name:Nashia Amourdon
+//Last edited:29/02/2016
 // MENU SCENE
 module scenes {
     export class SlotMachine extends objects.Scene {
@@ -19,13 +21,13 @@ module scenes {
         private playMoney: number;
         private winnings: number;
         private jackpot: number;
-        private _grapes = 0;
-        private _bananas = 0;
-        private _oranges = 0;
-        private _cherries = 0;
-        private _bars = 0;
-        private _bells = 0;
-        private _sevens = 0;
+        private _trueTulip = 0;
+        private _hourseConch = 0;
+        private _oursin = 0;
+        private _rockSnail = 0;
+        private _rougeScallop = 0;
+        private _starFish = 0;
+        private _beau = 0;
         private _blanks = 0;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -120,6 +122,7 @@ module scenes {
             this.winnings = 0;
             this.jackpot = 5000;
             this.playerBet = 0;
+            this.winnings=0;
         }
         
         /* When this function is called it determines the betLine results.
@@ -136,32 +139,32 @@ module scenes {
                         this._blanks++;
                         break;
                     case this._checkRange(outCome[spin], 28, 37): // 15.4% probability
-                        betLine[spin] = "Grapes";
-                        this._grapes++;
+                        betLine[spin] = "TrueTulip";
+                        this._trueTulip++;
                         break;
                     case this._checkRange(outCome[spin], 38, 46): // 13.8% probability
-                        betLine[spin] = "Banana";
-                        this._bananas++;
+                        betLine[spin] = "HorseConch";
+                        this._hourseConch++;
                         break;
                     case this._checkRange(outCome[spin], 47, 54): // 12.3% probability
-                        betLine[spin] = "Orange";
-                        this._oranges++;
+                        betLine[spin] = "Oursin";
+                        this._oursin++;
                         break;
                     case this._checkRange(outCome[spin], 55, 59): //  7.7% probability
-                        betLine[spin] = "Cherry";
-                        this._cherries++;
+                        betLine[spin] = "RockSnail";
+                        this._rockSnail++;
                         break;
                     case this._checkRange(outCome[spin], 60, 62): //  4.6% probability
-                        betLine[spin] = "Bar";
-                        this._bars++;
+                        betLine[spin] = "RougeScallop";
+                        this._rougeScallop++;
                         break;
                     case this._checkRange(outCome[spin], 63, 64): //  3.1% probability
-                        betLine[spin] = "Bell";
-                        this._bells++;
+                        betLine[spin] = "StarFish";
+                        this._starFish++;
                         break;
                     case this._checkRange(outCome[spin], 65, 65): //  1.5% probability
-                        betLine[spin] = "Seven";
-                        this._sevens++;
+                        betLine[spin] = "Beau";
+                        this._beau++;
                         break;
                 }
             }
@@ -169,49 +172,49 @@ module scenes {
         }
         private _determineWinnings(): void {
             if (this._blanks == 0) {
-                if (this._grapes == 3) {
+                if (this._trueTulip == 3) {
                     this.winnings = this.playerBet * 10;
                 }
-                else if (this._bananas == 3) {
+                else if (this._hourseConch == 3) {
                     this.winnings = this.playerBet * 20;
                 }
-                else if (this._oranges == 3) {
+                else if (this._oursin == 3) {
                     this.winnings = this.playerBet * 30;
                 }
-                else if (this._cherries == 3) {
+                else if (this._rockSnail == 3) {
                     this.winnings = this.playerBet * 40;
                 }
-                else if (this._bars == 3) {
+                else if (this._rougeScallop == 3) {
                     this.winnings = this.playerBet * 50;
                 }
-                else if (this._bells == 3) {
+                else if (this._starFish == 3) {
                     this.winnings = this.playerBet * 75;
                 }
-                else if (this._sevens == 3) {
+                else if (this._beau == 3) {
                     this.winnings = this.playerBet * 100;
                 }
-                else if (this._grapes == 2) {
+                else if (this._trueTulip == 2) {
                     this.winnings = this.playerBet * 2;
                 }
-                else if (this._bananas == 2) {
+                else if (this._hourseConch == 2) {
                     this.winnings = this.playerBet * 2;
                 }
-                else if (this._oranges == 2) {
+                else if (this._oursin == 2) {
                     this.winnings = this.playerBet * 3;
                 }
-                else if (this._cherries == 2) {
+                else if (this._rockSnail == 2) {
                     this.winnings = this.playerBet * 4;
                 }
-                else if (this._bars == 2) {
+                else if (this._rougeScallop == 2) {
                     this.winnings = this.playerBet * 5;
                 }
-                else if (this._bells == 2) {
+                else if (this._starFish == 2) {
                     this.winnings = this.playerBet * 10;
                 }
-                else if (this._sevens == 2) {
+                else if (this._beau == 2) {
                     this.winnings = this.playerBet * 20;
                 }
-                else if (this._sevens == 1) {
+                else if (this._beau == 1) {
                     this.winnings = this.playerBet * 5;
                 }
                 else {
@@ -227,16 +230,17 @@ module scenes {
             this.playMoney += this.winnings;
             this._creditsText.text = this.playMoney.toString();
             this._resetFruitTally();
+            
         }
 
         private _resetFruitTally(): void {
-            this._grapes = 0;
-            this._bananas = 0;
-            this._oranges = 0;
-            this._cherries = 0;
-            this._bars = 0;
-            this._bells = 0;
-            this._sevens = 0;
+            this._trueTulip = 0;
+            this._hourseConch = 0;
+            this._oursin = 0;
+            this._rockSnail = 0;
+            this._rougeScallop = 0;
+            this._starFish = 0;
+            this._beau = 0;
             this._blanks = 0;
 
         }
@@ -259,6 +263,7 @@ module scenes {
                 this.playMoney -= playerBet;
                 this._creditsText.text = this.playMoney.toString();
                 this._betText.text = this.playerBet.toString();
+                
             }
         }
         
@@ -276,26 +281,48 @@ module scenes {
             this._placeBet(500);
         }
         private _spinButtonClick(event: createjs.MouseEvent): void {
-            //check for enought money
+            //check for enough money
             if (this.playerBet > 0) {
                 var bitmap: string[] = this._spinReels();
                 for (var reel: number = 0; reel < 3; reel++) {
                     this._reels[reel].image = assets.getResult(bitmap[reel]);
                 }
+                 
+           
+                
                 this._determineWinnings();
                 this.playerBet = 0;
+                this.winnings=0;
+                //this._winningsText.text= this.winnings.toString();
                 this._betText.text = this.playerBet.toString();
+               
             }
-            //this.addChild(this._reels[0]);
-            // console.log(this.numChildren);
+           if(this.playMoney<=0){
+                this._fadeOut(500, () => {
+                // Switch to the LEFT_CAVE Scene
+                scene = config.Scene.GAME_OVER;
+                changeScene();
+            });
+                
+            }
+            
             
         }
         private _resetButtonClick(event: createjs.MouseEvent): void {
+            this._resetAll();
+           this._creditsText.text="1000";
+           this._winningsText.text="0";
+           this._betText.text="0";
             console.log("Credit reset");
         }
 
         private _exitButtonClick(event: createjs.MouseEvent): void {
             console.log("Exit Game");
+            this._fadeOut(500, () => {
+                // Switch to the LEFT_CAVE Scene
+                scene = config.Scene.MENU;
+                changeScene();
+            });
         }
         //  }
     }

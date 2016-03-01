@@ -1,4 +1,6 @@
-﻿module objects {
+﻿//Name:Nashia Amourdon
+//Last edited:29/02/2016
+module objects {
     export class Button extends createjs.Bitmap {
         //PRIVATE INSTANCE VARIABLES
         public width: number;

@@ -1,3 +1,4 @@
+//Name:Nashia Amourdon
 module objects {
     // ASSET CLASS ++++++++++++++++++++++++++
     export class Asset {
